@@ -8,6 +8,20 @@ network. You probably want a more reliable way to keep Zigbee2MQTT and the MQTT
 broker running. Also you probably don't want the data in mosquitto_data and
 z2m_data to be public.
 
+# Why this repo?
+I had to piece this info together from multiple incomplete and incorrect
+sources, which was pretty frustrating.
+
+- which docs are the official docs?
+- https://uzg.zig-star.com/ is still up, but the docs are outdated (eg. LED and
+  button info is incorrect)
+- https://xzg.xyzroe.cc/ just talks about firmware. What about my hardware?
+- https://www.zigbee2mqtt.io/guide/installation/02_docker.html#running-the-container
+  - great, but I don't have a MQTT broker
+  - also, it fails to communicate with the ZigStar until you put it into USB
+    mode. This is a perfect pairing with the incorrect LED/button docs above
+    :chefs-kiss:
+
 # Hardware
 - zigstar uzg-01
   - I bought from [little bird](https://littlebirdelectronics.com.au/products/zigstar-uzg-01-universal-zigbee-gateway-1?_pos=1&_psq=zig&_ss=e&_v=1.0)
@@ -23,9 +37,11 @@ z2m_data to be public.
 # Quick start
 - clone this repo and cd in
 - plug in the ZigStar USG to your computer with a USB cable. Wait for the white
-  light to start flashing.
+  light to start flashing (white flashing = running in network mode, no
+  connection)
 - press and hold the button under the antenna until the red light flashes
-- wait a few seconds - the red light should come on permanently
+- wait a few seconds - the red light should come on permanently (red solid = USB
+  mode active)
 - run `ls /dev/serial/by-id/`, make sure there's a device in there. Update
   ./docker-compose.yml -> devices to match your device
 - run `docker-compose up`
