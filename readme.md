@@ -13,6 +13,11 @@ z2m_data to be public.
   - I bought from [little bird](https://littlebirdelectronics.com.au/products/zigstar-uzg-01-universal-zigbee-gateway-1?_pos=1&_psq=zig&_ss=e&_v=1.0)
   - flashed with zstack, uses CC2652P7 chip
   - sticker on device: uzg-poe-0.6
+  - not sure what firmware it's running. Apparently it's the latest, which at
+    the time of writing seems to be [20241001](https://github.com/xyzroe/XZG/releases/tag/20241001).
+    It's unclear whether this is all the firmware. Outdated docs indicate
+    there's multiple boards in the device, each with their own firmware:
+    [old? zigstar docs: flashing and updating](https://uzg.zig-star.com/flashing-and-updating/)
 - ikea tradfri lamp + rodret switch
 
 # Quick start
@@ -51,3 +56,5 @@ z2m_data to be public.
 - [LED and buttons](https://xzg.xyzroe.cc/hardware/)
 - [Zigbee2MQTT: getting started](https://www.zigbee2mqtt.io/guide/getting-started/)
 - [Zigbee2MQTT: IKEA device docs](https://www.zigbee2mqtt.io/supported-devices/#v=IKEA)
+- [ZigStar flashing and updating](https://uzg.zig-star.com/flashing-and-updating/)
+  - old?
