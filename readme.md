@@ -15,12 +15,14 @@ sources, which was pretty frustrating.
 - which docs are the official docs?
 - https://uzg.zig-star.com/ is still up, but the docs are outdated (eg. LED and
   button info is incorrect)
-- https://xzg.xyzroe.cc/ just talks about firmware. What about my hardware?
+- https://xzg.xyzroe.cc/. Is it just firmware? What about my hardware? Oh it
+  links to the outdated site above.
 - https://www.zigbee2mqtt.io/guide/installation/02_docker.html#running-the-container
   - great, but I don't have a MQTT broker
   - also, it fails to communicate with the ZigStar until you put it into USB
     mode. This is a perfect pairing with the incorrect LED/button docs above
     :chefs-kiss:
+- you get the point
 
 # Hardware
 - zigstar uzg-01
