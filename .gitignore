@@ -1,0 +1,6 @@
+z2m_data/*
+!z2m_data/configuration.yaml
+mosquitto_data/*
+!mosquitto_data/config
+mosquitto_data/config/*
+!mosquitto_data/config/mosquitto.conf

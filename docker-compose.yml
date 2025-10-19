@@ -1,0 +1,25 @@
+services:
+  zigbee2mqtt:
+    container_name: zigbee2mqtt
+    depends_on:
+      - mosquitto
+    image: ghcr.io/koenkk/zigbee2mqtt
+    restart: unless-stopped
+    volumes:
+      - ./z2m_data:/app/data
+      - /run/udev:/run/udev:ro
+    ports:
+      - 8080:8080
+    environment:
+      - TZ=Australia/Melbourne
+    devices:
+      - /dev/serial/by-id/usb-1a86_USB_Serial-if00-port0:/dev/ttyACM0
+    group_add:
+      - dialout
+    user: 1000:1000
+  mosquitto:
+    container_name: mosquitto
+    image: docker.io/eclipse-mosquitto
+    volumes:
+      - ./mosquitto_data:/mosquitto
+    user: 1000:1000
